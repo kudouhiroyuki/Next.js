@@ -1,5 +1,5 @@
 ## サイト画面
-http://localhost:3000
+http://localhost:3000<br>
 http://localhost:3000/about
 
 ## Laravel<br>
