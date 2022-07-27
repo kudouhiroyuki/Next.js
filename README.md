@@ -14,6 +14,9 @@ touch tsconfig.json<br>
 yarn add --dev typescript @types/react @types/node<br>
 yarn build
 
+- Sassインストール<br>
+yarn add sass --dev
+
 - 起動<br>
 yarn dev
 
