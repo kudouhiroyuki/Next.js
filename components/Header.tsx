@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-function Header() {
+export default function Header() {
   return <>
     <header>
       <Link href="/"><a>Top</a></Link>
@@ -8,5 +8,3 @@ function Header() {
     </header>
   </>
 }
-
-export default Header;
