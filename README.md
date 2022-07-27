@@ -9,6 +9,6 @@ npm install --global yarn
 yarn create next-app
 
 - Typescript設定<br>
-touch tsconfig.json
-yarn add --dev typescript @types/react @types/node
+touch tsconfig.json<br>
+yarn add --dev typescript @types/react @types/node<br>
 yarn build
