@@ -13,3 +13,9 @@ yarn create next-app
 touch tsconfig.json<br>
 yarn add --dev typescript @types/react @types/node<br>
 yarn build
+
+- 起動<br>
+yarn dev
+
+- ビルド（.next/）<br>
+yarn build
