@@ -1,6 +1,10 @@
-import Header from './Header';
+import Header from './Header'
 
-export default function Layout({ children }) {
+type Props = {
+  children?: React.ReactNode
+}
+
+export default function Layout({ children }: Props) {
   return (
     <div>
       <Header />
