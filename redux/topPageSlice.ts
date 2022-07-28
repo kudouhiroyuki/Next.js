@@ -6,8 +6,8 @@ export interface TopPageState {
 }
 
 const initialState: TopPageState = {
-  prefecture: "PRE01",
-  keyword: "デモサロン",
+  prefecture: "",
+  keyword: "",
 };
 
 export const topPageSlice = createSlice({
