@@ -1,12 +1,12 @@
 import Layout from '@/components/Layout'
 import Breadcrumb from '@/components/Breadcrumb'
 
-export default function Home() {
+export default function Hair() {
   return (
     <Layout>
       <Breadcrumb
         lists={[
-          { name: "home", path: "/" },
+          { name: "ヘアサロン・メイク", path: "/" },
         ]}
       />
       <p>index.ts</p>

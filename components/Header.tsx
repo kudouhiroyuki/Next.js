@@ -3,8 +3,8 @@ import Link from 'next/link';
 export default function Header() {
   return <>
     <header>
-      <Link href="/"><a>Home</a></Link>
-      <Link href="/about"><a>About</a></Link>
+      <Link href="/"><a>ヘアサロン・メイク</a></Link>
+      <Link href="/nail"><a>ネイル・まつげ</a></Link>
     </header>
   </>
 }

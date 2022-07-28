@@ -1,15 +1,15 @@
 import Layout from '@/components/Layout'
 import Breadcrumb from '@/components/Breadcrumb'
 
-export default function About() {
+export default function Nail() {
   return (
     <Layout>
       <Breadcrumb
         lists={[
-          { name: "about", path: "/about" },
+          { name: "ネイル・まつげ", path: "/nail" },
         ]}
       />
-      <p>/about/index.ts</p>
+      <p>/nail/index.ts</p>
     </Layout>
   )
 }
