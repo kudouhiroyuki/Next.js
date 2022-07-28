@@ -1,7 +1,7 @@
 import Layout from '@/components/Layout'
 import Breadcrumb from '@/components/Breadcrumb'
 
-export default function Nail() {
+export default function NailTop() {
   return (
     <Layout>
       <Breadcrumb

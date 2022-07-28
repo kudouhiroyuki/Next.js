@@ -10,7 +10,7 @@ export interface RootState {
   };
 };
 
-export default function Hair() {
+export default function HairTop() {
   const [state, setState] = useState({
     prefecture: useSelector((state: RootState) => state.topPage.prefecture),
     keyword: useSelector((state: RootState) => state.topPage.keyword),
