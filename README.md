@@ -38,7 +38,7 @@ bugfix/CMS_DEFECT-XX<br>
 
 
 ## Backlog運用<br>
-- 記載例（バグ修正の場合）<br>
+#### 記載例（バグ修正の場合）<br>
 <--------原因---------><br>
 xxxxxxxxxxxxx
 
