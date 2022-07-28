@@ -49,15 +49,19 @@ xxxxxxxxxxxxx
 各TOPページ<br>
 ↳スライダーが正常動作すること
 
-ステージング：テスト（完了）<br>
-デモ用：デモサロン<br>
-https://xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+■devPR（マージ済み）<br>
+https://GitプルリクURL
 
-masterPR（マージ済み）<br>
-
-本番：テスト（完了）<br>
+■ステージング：テスト（完了）<br>
 デモ用：デモサロン<br>
-https://xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+https://ステージング環境の該当URL
+
+■masterPR（マージ済み）<br>
+https://GitプルリクURL
+
+■本番：テスト（完了）<br>
+デモ用：デモサロン<br>
+https://本番環境の該当URL
 
 - Backlog複数人開発（1チケット当たり）<br>
 1. 親ブランチ作成（Backlog ID: CMS_DEFECT-98）<br>
