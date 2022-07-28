@@ -1,6 +1,12 @@
 import { useState } from "react";
 import Layout from '@/components/Layout'
 import Breadcrumb from '@/components/Breadcrumb'
+import { useSelector } from 'react-redux'
+
+interface RootState {
+  counter: any,
+  count: number
+}
 
 export default function Hair() {
   const [state, setState] = useState({
@@ -9,12 +15,15 @@ export default function Hair() {
     textarea: "",
   });
 
+  const count = useSelector((state: RootState) => state.counter.count);
+
   const onFormChange = (name: string, value: string) => {
     setState({ ...state, [name]: value });
   };
 
   return (
     <Layout>
+      {count}
       <Breadcrumb
         lists={[
           { name: "ヘアサロン・メイク", path: "/" },
