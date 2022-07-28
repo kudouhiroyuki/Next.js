@@ -2,7 +2,11 @@
 http://localhost:3000<br>
 http://localhost:3000/about
 
-## Laravel<br>
+## 環境構築<br>
+npm install
+yarn dev
+
+## 環境構築Log<br>
 - yarnインストール<br>
 npm install --global yarn
 
@@ -22,3 +26,40 @@ yarn dev
 
 - ビルド（.next/）<br>
 yarn build
+
+## ブランチ運用<br>
+- ブランチ名（チケット名にしてください）<br>
+feature/CMS_RENEW-XX<br>
+bugfix/CMS_DEFECT-XX<br>
+- コミット（コミットの時には「リリースフェーズ」「チケット名」を記載してください）<br>
+【フェーズ1】 CMS_DEFECT-XX 機能追加<br>
+【バグ】 CMS_DEFECT-XX バグ修正
+
+
+## Backlog運用<br>
+- 記載例（バグ修正の場合）<br>
+<--------原因---------><br>
+xxxxxxxxxxxxx<br>
+<------修正内容------><br>
+xxxxxxxxxxxxx<br>
+<--------テスト---------><br>
+各TOPページ<br>
+↳スライダーが正常動作すること<br>
+
+■ステージング：テスト（完了）<br>
+デモ用：デモサロン<br>
+https://xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+■masterPR（マージ済み）<br>
+
+■本番：テスト（完了）<br>
+デモ用：デモサロン<br>
+https://xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+- Backlog複数人開発（1チケット当たり）<br>
+1. 親ブランチ作成（Backlog ID: CMS_DEFECT-98）<br>
+bugfix/CMS_DEFECT-983/983<br>
+2. 子課題+子ブランチ作成(backlog ID: CMS_DEFECT-002)<br>
+bugfix/CMS_DEFECT-983/984（親ブランチから切る）<br>
+3. 子課題+子ブランチ作成(backlog ID: CMS_DEFECT-003)<br>
+bugfix/CMS_DEFECT-983/985（親ブランチから切る）
