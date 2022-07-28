@@ -3,7 +3,7 @@ http://localhost:3000<br>
 http://localhost:3000/about
 
 ## 環境構築<br>
-npm install
+npm install<br>
 yarn dev
 
 ## 環境構築Log<br>
@@ -31,6 +31,7 @@ yarn build
 - ブランチ名（チケット名にしてください）<br>
 feature/CMS_RENEW-XX<br>
 bugfix/CMS_DEFECT-XX<br>
+
 - コミット（コミットの時には「リリースフェーズ」「チケット名」を記載してください）<br>
 【フェーズ1】 CMS_DEFECT-XX 機能追加<br>
 【バグ】 CMS_DEFECT-XX バグ修正
@@ -39,20 +40,22 @@ bugfix/CMS_DEFECT-XX<br>
 ## Backlog運用<br>
 - 記載例（バグ修正の場合）<br>
 <--------原因---------><br>
-xxxxxxxxxxxxx<br>
+xxxxxxxxxxxxx
+
 <------修正内容------><br>
-xxxxxxxxxxxxx<br>
+xxxxxxxxxxxxx
+
 <--------テスト---------><br>
 各TOPページ<br>
-↳スライダーが正常動作すること<br>
+↳スライダーが正常動作すること
 
-■ステージング：テスト（完了）<br>
+ステージング：テスト（完了）<br>
 デモ用：デモサロン<br>
 https://xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-■masterPR（マージ済み）<br>
+masterPR（マージ済み）<br>
 
-■本番：テスト（完了）<br>
+本番：テスト（完了）<br>
 デモ用：デモサロン<br>
 https://xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
