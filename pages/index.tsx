@@ -1,4 +1,3 @@
-// import { useState } from "react"
 import { useSelector, useDispatch } from 'react-redux'
 import Layout from '@/components/Layout'
 import Breadcrumb from '@/components/Breadcrumb'
@@ -19,18 +18,21 @@ export const prefectureLists: {[key: string]: string}[] = [
 ]
 
 export default function HairTop() {
+  // import { useState } from "react"
   // const [state, setState] = useState({
-  //   prefecture: useSelector((state: RootState) => state.topPage.prefecture),
-  //   keyword: useSelector((state: RootState) => state.topPage.keyword),
+  //   prefecture: "",
+  //   keyword: "",
   // });
   // setState({ ...state, [name]: value });
+  // value={state.prefecture}
+  // value={state.keyword}
 
   const dispatch = useDispatch();
   const prefecture = useSelector((state: RootState) => state.topPage.prefecture);
   const keyword = useSelector((state: RootState) => state.topPage.keyword);
 
   const onFormChange = (name: string, value: string) => {
-    dispatch(setValue());
+    dispatch(setValue({ name, value }));
   };
 
   return (

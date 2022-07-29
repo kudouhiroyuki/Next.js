@@ -14,10 +14,8 @@ export const topPageSlice = createSlice({
   name: 'topPage',
   initialState,
   reducers: {
-    setValue: (state) => {
-      alert("setValue")
-      console.log(state)
-      // state.count += 1;
+    setValue: (state, action) => {
+      state[action['payload']['name']] = action['payload']['value'];
     },
   },
 });
