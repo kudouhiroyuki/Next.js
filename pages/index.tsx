@@ -1,7 +1,8 @@
-import { useState } from "react";
+// import { useState } from "react"
+import { useSelector, useDispatch } from 'react-redux'
 import Layout from '@/components/Layout'
 import Breadcrumb from '@/components/Breadcrumb'
-import { useSelector } from 'react-redux'
+import { setValue } from '@/redux/topPageSlice'
 
 export interface RootState {
   topPage: {
@@ -18,13 +19,18 @@ export const prefectureLists: {[key: string]: string}[] = [
 ]
 
 export default function HairTop() {
-  const [state, setState] = useState({
-    prefecture: useSelector((state: RootState) => state.topPage.prefecture),
-    keyword: useSelector((state: RootState) => state.topPage.keyword),
-  });
+  // const [state, setState] = useState({
+  //   prefecture: useSelector((state: RootState) => state.topPage.prefecture),
+  //   keyword: useSelector((state: RootState) => state.topPage.keyword),
+  // });
+  // setState({ ...state, [name]: value });
+
+  const dispatch = useDispatch();
+  const prefecture = useSelector((state: RootState) => state.topPage.prefecture);
+  const keyword = useSelector((state: RootState) => state.topPage.keyword);
 
   const onFormChange = (name: string, value: string) => {
-    setState({ ...state, [name]: value });
+    dispatch(setValue());
   };
 
   return (
@@ -37,7 +43,7 @@ export default function HairTop() {
       <div>
         <label>エリア</label>
         <select
-          value={state.prefecture}
+          value={prefecture}
           onChange={(event) => onFormChange(event.target.name, event.target.value)}
           name="prefecture"
         >
@@ -50,17 +56,7 @@ export default function HairTop() {
       <div>
         <label>キーワード</label>
         <input
-          value={state.keyword}
-          onChange={(event) => onFormChange(event.target.name, event.target.value)}
-          type="text"
-          name="keyword"
-          placeholder="キーワードを入力してください"
-        />
-      </div>
-      <div>
-        <label>設備・サービス</label>
-        <input
-          value={state.keyword}
+          value={keyword}
           onChange={(event) => onFormChange(event.target.name, event.target.value)}
           type="text"
           name="keyword"

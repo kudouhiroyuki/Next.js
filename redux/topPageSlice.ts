@@ -14,15 +14,14 @@ export const topPageSlice = createSlice({
   name: 'topPage',
   initialState,
   reducers: {
-    increase: (state) => {
+    setValue: (state) => {
+      alert("setValue")
+      console.log(state)
       // state.count += 1;
-    },
-    decrease: (state) => {
-      // state.count -= 1;
     },
   },
 });
 
-export const { increase, decrease } = topPageSlice.actions;
+export const { setValue } = topPageSlice.actions;
 
 export default topPageSlice.reducer;
