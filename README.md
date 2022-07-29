@@ -76,3 +76,7 @@ bugfix/CMS_DEFECT-983/983<br>
 bugfix/CMS_DEFECT-983/984（親ブランチから切る）<br>
 3. 子課題+子ブランチ作成(backlog ID: CMS_DEFECT-003)<br>
 bugfix/CMS_DEFECT-983/985（親ブランチから切る）
+
+#### TypeScriptサンプル<br>
+const test: number[] = [0, 1, 2];<br>
+const test: Array<number> = [0, 1, 2];
