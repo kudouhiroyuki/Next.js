@@ -10,7 +10,8 @@
     "paths": {
       "@/components/*": ["components/*"],
       "@/styles/*": ["styles/*"],
-      "@/redux/*": ["redux/*"]
+      "@/redux/*": ["redux/*"],
+      "@/api/*": ["api/*"]
     },
     "allowJs": true,
     "skipLibCheck": true,

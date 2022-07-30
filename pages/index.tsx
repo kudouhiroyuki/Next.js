@@ -6,6 +6,7 @@ import { setValue, getMenusApi } from '@/redux/topPageSlice'
 
 export interface RootState {
   topPage: {
+    menus: {[key: string]: string}[];
     prefecture: string;
     keyword: string;
   };
@@ -29,13 +30,14 @@ export default function HairTop() {
   // value={state.keyword}
 
   const dispatch: AppDispatch = useDispatch();
+  const menus = useSelector((state: RootState) => state.topPage.menus);
   const prefecture = useSelector((state: RootState) => state.topPage.prefecture);
   const keyword = useSelector((state: RootState) => state.topPage.keyword);
 
-  dispatch(getMenusApi());
-
   const onFormChange = (name: string, value: string) => {
     dispatch(setValue({ name, value }));
+
+    dispatch(getMenusApi());
   };
 
   return (
@@ -45,6 +47,14 @@ export default function HairTop() {
           { name: "ヘアサロン・メイク", path: "/" },
         ]}
       />
+      <div>
+        {menus.map((option, key) => (
+          <>
+            <span>{option.menu_name}</span>
+            <img src={option.menu_image_url}></img>
+          </>
+        ))}
+      </div>
       <div>
         <label>エリア</label>
         <select
