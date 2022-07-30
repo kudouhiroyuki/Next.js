@@ -1,3 +1,4 @@
+import { useState, useEffect, useRef } from "react"
 import { useSelector, useDispatch } from 'react-redux'
 import Layout from '@/components/Layout'
 import Breadcrumb from '@/components/Breadcrumb'
@@ -20,7 +21,6 @@ export const prefectureLists: {[key: string]: string}[] = [
 ]
 
 export default function HairTop() {
-  // import { useState } from "react"
   // const [state, setState] = useState({
   //   prefecture: "",
   //   keyword: "",
@@ -34,10 +34,13 @@ export default function HairTop() {
   const prefecture = useSelector((state: RootState) => state.topPage.prefecture);
   const keyword = useSelector((state: RootState) => state.topPage.keyword);
 
+  useEffect(() => {
+    // API処理
+    dispatch(getMenusApi());
+  },[])
+
   const onFormChange = (name: string, value: string) => {
     dispatch(setValue({ name, value }));
-
-    dispatch(getMenusApi());
   };
 
   return (
@@ -49,10 +52,10 @@ export default function HairTop() {
       />
       <div>
         {menus.map((option, key) => (
-          <>
+          <div key={key}>
             <span>{option.menu_name}</span>
             <img src={option.menu_image_url}></img>
-          </>
+          </div>
         ))}
       </div>
       <div>
