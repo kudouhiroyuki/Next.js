@@ -27,6 +27,9 @@ yarn add eslint @typescript-eslint/eslint-plugin @typescript-eslint/parser --dev
 - Redux Toolkitインストール<br>
 npm install --save @reduxjs/toolkit react-redux @types/react-redux
 
+- axiosインストール<br>
+yarn add axios
+
 - 起動<br>
 yarn dev
 

@@ -1,4 +1,5 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import axios from 'axios';
 
 export interface TopPageState {
   prefecture: string;
@@ -10,6 +11,15 @@ const initialState: TopPageState = {
   keyword: "",
 };
 
+// メニュー一覧取得API
+export const getMenusApi = createAsyncThunk(
+  "getMenusApis",
+  async () => {
+    alert(6666)
+    const response = await axios.get(`https://beauty.tsuku2.jp/api/menus?category_id=1`);
+  }
+);
+
 export const topPageSlice = createSlice({
   name: 'topPage',
   initialState,
@@ -18,8 +28,13 @@ export const topPageSlice = createSlice({
       state[action['payload']['name']] = action['payload']['value'];
     },
   },
+  extraReducers: (builder) => {
+    builder.addCase(getMenusApi.fulfilled, (state, action) => {
+      alert("完了:getMenusApi");
+    });
+  },
 });
 
-export const { setValue } = topPageSlice.actions;
+export const { setValue, } = topPageSlice.actions;
 
 export default topPageSlice.reducer;

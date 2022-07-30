@@ -1,7 +1,8 @@
 import { useSelector, useDispatch } from 'react-redux'
 import Layout from '@/components/Layout'
 import Breadcrumb from '@/components/Breadcrumb'
-import { setValue } from '@/redux/topPageSlice'
+import { AppDispatch } from '@/redux/store'
+import { setValue, getMenusApi } from '@/redux/topPageSlice'
 
 export interface RootState {
   topPage: {
@@ -27,12 +28,14 @@ export default function HairTop() {
   // value={state.prefecture}
   // value={state.keyword}
 
-  const dispatch = useDispatch();
+  const dispatch: AppDispatch = useDispatch();
+
   const prefecture = useSelector((state: RootState) => state.topPage.prefecture);
   const keyword = useSelector((state: RootState) => state.topPage.keyword);
 
   const onFormChange = (name: string, value: string) => {
     dispatch(setValue({ name, value }));
+    dispatch(getMenusApi());
   };
 
   return (
