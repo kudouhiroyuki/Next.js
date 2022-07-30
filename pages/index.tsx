@@ -29,13 +29,13 @@ export default function HairTop() {
   // value={state.keyword}
 
   const dispatch: AppDispatch = useDispatch();
-
   const prefecture = useSelector((state: RootState) => state.topPage.prefecture);
   const keyword = useSelector((state: RootState) => state.topPage.keyword);
 
+  dispatch(getMenusApi());
+
   const onFormChange = (name: string, value: string) => {
     dispatch(setValue({ name, value }));
-    dispatch(getMenusApi());
   };
 
   return (

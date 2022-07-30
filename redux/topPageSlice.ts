@@ -7,16 +7,20 @@ export interface TopPageState {
 }
 
 const initialState: TopPageState = {
-  prefecture: "",
-  keyword: "",
+  // menus: [],      // メニュー一覧（API）
+  // 検索データ
+  prefecture: "", // エリア
+  keyword: "",    // キーワード
 };
 
 // メニュー一覧取得API
 export const getMenusApi = createAsyncThunk(
-  "getMenusApis",
+  "getMenus",
   async () => {
-    alert(6666)
-    const response = await axios.get(`https://beauty.tsuku2.jp/api/menus?category_id=1`);
+    const res = await axios.get(`https://beauty.tsuku2.jp/api/menus?category_id=1`);
+    if (typeof res !== 'undefined') {
+      console.log(res.data)
+    }
   }
 );
 
@@ -30,7 +34,7 @@ export const topPageSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder.addCase(getMenusApi.fulfilled, (state, action) => {
-      alert("完了:getMenusApi");
+      
     });
   },
 });
