@@ -36,7 +36,7 @@ export default function HairTop() {
 
   useEffect(() => {
     // API処理
-    dispatch(getMenusApi());
+    dispatch(getMenusApi({ category_id: 1 }));
   },[])
 
   const onFormChange = (name: string, value: string) => {
@@ -51,6 +51,8 @@ export default function HairTop() {
         ]}
       />
       <div>
+        <h3>Menu</h3>
+        <span>人気メニュー・スタイルから探す</span>
         {menus.map((option, key) => (
           <div key={key}>
             <span>{option.menu_name}</span>

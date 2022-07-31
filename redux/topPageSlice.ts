@@ -1,13 +1,17 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import * as menusApi from '@/api/menus';
 
-export interface TopPageState {
+export interface InitialState {
   menus: {[key: string]: string}[];
   prefecture: string;
   keyword: string;
 }
 
-const initialState: TopPageState = {
+export interface MenusParams {
+  category_id: number;
+}
+
+const initialState: InitialState = {
   menus: [],      // メニュー一覧（API）
   // 検索データ
   prefecture: "", // エリア
@@ -17,9 +21,8 @@ const initialState: TopPageState = {
 // メニュー一覧取得API
 export const getMenusApi = createAsyncThunk(
   "getMenus",
-  async () => {
-    let params = { category_id: 1 }
-    return menusApi.get(params);
+  async (menusParams: MenusParams) => {
+    return menusApi.get(menusParams);
   }
 );
 

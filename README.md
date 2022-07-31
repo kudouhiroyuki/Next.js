@@ -6,6 +6,12 @@ http://localhost:3000/about
 npm install<br>
 yarn dev
 
+- React Developer Tools<br>
+https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi
+
+- Redux DevTools<br>
+https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=ja
+
 ## 環境構築Log<br>
 - yarnインストール<br>
 npm install --global yarn
