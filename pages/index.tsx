@@ -1,7 +1,6 @@
-import { useState, useEffect, useRef } from "react"
+import { useEffect } from "react"
 import { useSelector, useDispatch } from 'react-redux'
 import Layout from '@/components/Layout'
-import Breadcrumb from '@/components/Breadcrumb'
 import { AppDispatch } from '@/redux/store'
 import { setValue, getMenusApi } from '@/redux/topPageSlice'
 
@@ -21,14 +20,6 @@ export const prefectureLists: {[key: string]: string}[] = [
 ]
 
 export default function HairTop() {
-  // const [state, setState] = useState({
-  //   prefecture: "",
-  //   keyword: "",
-  // });
-  // setState({ ...state, [name]: value });
-  // value={state.prefecture}
-  // value={state.keyword}
-
   const dispatch: AppDispatch = useDispatch();
   const menus = useSelector((state: RootState) => state.topPage.menus);
   const prefecture = useSelector((state: RootState) => state.topPage.prefecture);
@@ -45,11 +36,33 @@ export default function HairTop() {
 
   return (
     <Layout>
-      <Breadcrumb
-        lists={[
-          { name: "ヘアサロン・メイク", path: "/" },
-        ]}
-      />
+      <form action="/hair/search" method="get">
+        <div>
+          <label>エリア</label>
+          <select
+            value={prefecture}
+            onChange={(event) => onFormChange(event.target.name, event.target.value)}
+            name="prefecture"
+          >
+            <option value="">指定しない</option>
+            {prefectureLists.map((option, key) => (
+              <option value={option.value} key={key}>{option.name}</option>
+            ))}
+          </select>
+        </div>
+        <div>
+          <label>キーワード</label>
+          <input
+            value={keyword}
+            onChange={(event) => onFormChange(event.target.name, event.target.value)}
+            type="text"
+            name="keyword"
+            placeholder="キーワードを入力してください"
+          />
+        </div>
+        <input type="submit" value="探す"></input>
+      </form>
+
       <div>
         <h3>Menu</h3>
         <span>人気メニュー・スタイルから探す</span>
@@ -59,29 +72,6 @@ export default function HairTop() {
             <img src={option.menu_image_url}></img>
           </div>
         ))}
-      </div>
-      <div>
-        <label>エリア</label>
-        <select
-          value={prefecture}
-          onChange={(event) => onFormChange(event.target.name, event.target.value)}
-          name="prefecture"
-        >
-          <option value="">指定しない</option>
-          {prefectureLists.map((option, key) => (
-            <option value={option.value} key={key}>{option.name}</option>
-          ))}
-        </select>
-      </div>
-      <div>
-        <label>キーワード</label>
-        <input
-          value={keyword}
-          onChange={(event) => onFormChange(event.target.name, event.target.value)}
-          type="text"
-          name="keyword"
-          placeholder="キーワードを入力してください"
-        />
       </div>
     </Layout>
   )
