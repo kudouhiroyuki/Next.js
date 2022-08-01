@@ -1,6 +1,8 @@
 ## サイト画面
-http://localhost:3000<br>
-http://localhost:3000/about
+- サイトトップ（ヘアサロン・メイク）index.tsx
+http://localhost:3000
+- トップ- ネイル・まつげ　nail/index.tsx
+http://localhost:3000/nail
 
 ## 環境構築<br>
 npm install<br>
