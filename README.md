@@ -1,13 +1,5 @@
-## サイト画面
-- サイトトップ（ヘアサロン・メイク）index.tsx<br>
-http://localhost:3000
-- トップ- ネイル・まつげ　nail/index.tsx<br>
-http://localhost:3000/nail
-- サロン・プラン検索結果 - ヘアサロン・メイク /[category]/search<br>
-http://localhost:3000/hair/search<br>
-http://localhost:3000/hair/search?prefecture=&keyword=
-
-- 施設管理
+## Admin画面
+- 施設管理<br>
 お知らせ登録 /institution/notice_regist<br>
 http://localhost:3000/institution/notice_regist
 

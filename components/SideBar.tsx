@@ -6,7 +6,7 @@ export default function SideBar() {
       <li>
         <span>施設管理</span>
         <a href="">施設情報管理</a>
-        <a href="">お知らせ登録</a>
+        <a href="/institution/notice_regist">お知らせ登録</a>
         <a href="">お知らせ照会</a>
       </li>
       <li>
