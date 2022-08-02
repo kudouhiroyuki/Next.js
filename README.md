@@ -3,8 +3,8 @@
 http://localhost:3000
 - トップ- ネイル・まつげ　nail/index.tsx<br>
 http://localhost:3000/nail
-- サロン・プラン検索結果 - ヘアサロン・メイク /[category]/search
-http://localhost:3000/hair/search
+- サロン・プラン検索結果 - ヘアサロン・メイク /[category]/search<br>
+http://localhost:3000/hair/search<br>
 http://localhost:3000/hair/search?prefecture=&keyword=
 
 ## 環境構築<br>
