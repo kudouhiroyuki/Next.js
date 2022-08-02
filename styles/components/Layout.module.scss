@@ -3,5 +3,15 @@
   height: 100vh;
   main {
     display: flex;
+    background-color: #f5f5fa;
+    section {
+      box-sizing: border-box;
+      width: calc(100% - 310px);
+      margin: 25px;
+      padding: 28px;
+      box-shadow: 0 2px 6px rgb(0 0 0 / 8%);
+      border-radius: 3px;
+      background-color: #fff;
+    }
   }
 }

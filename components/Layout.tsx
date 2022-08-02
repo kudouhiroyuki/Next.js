@@ -12,7 +12,9 @@ export default function Layout({ children }: Props) {
       <Header />
       <main>
         <SideBar />
-        { children }
+        <section>
+          { children }
+        </section>
       </main>
     </div>
   )

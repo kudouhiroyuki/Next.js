@@ -1,9 +1,9 @@
 import Layout from '@/components/Layout'
 
-export default function NoticeRegist() {
+export default function NoticeInquiry() {
   return (
     <Layout>
-      <p>お知らせ登録</p>
+      <p>お知らせ照会</p>
     </Layout>
   )
 }
