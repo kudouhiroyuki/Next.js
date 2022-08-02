@@ -1,6 +1,6 @@
 ## Admin画面
-- 施設管理<br>
-お知らせ登録 /institution/notice_regist<br>
+#### 施設管理<br>
+- お知らせ登録 /institution/notice_regist<br>
 http://localhost:3000/institution/notice_regist
 
 ## 環境構築<br>
