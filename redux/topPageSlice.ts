@@ -17,10 +17,10 @@ const initialState: InitialState = {
   // 固定値データ
   prefectureLists: values.prefectureLists, // 都道府県リスト
   // APIデータ
-  menus: [],           // メニュー一覧
+  menus: [],                               // メニュー一覧
   // 検索データ
-  prefecture: "",      // エリア
-  keyword: "",         // キーワード
+  prefecture: "",                          // エリア
+  keyword: "",                             // キーワード
 };
 
 // メニュー一覧取得API
