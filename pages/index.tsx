@@ -1,26 +1,23 @@
-import { useEffect } from "react"
-import { useSelector, useDispatch } from 'react-redux'
-import Layout from '@/components/Layout'
-import { AppDispatch } from '@/redux/store'
-import { setValue, getMenusApi } from '@/redux/topPageSlice'
+import { useEffect } from "react";
+import { useSelector, useDispatch } from 'react-redux';
+// Components
+import Layout from '@/components/Layout';
+// Redux
+import { AppDispatch } from '@/redux/store';
+import { setValue, getMenusApi } from '@/redux/topPageSlice';
 
 export interface RootState {
   topPage: {
+    prefectureLists: {[key: string]: string}[];
     menus: {[key: string]: string}[];
     prefecture: string;
     keyword: string;
   };
 };
- 
-export const prefectureLists: {[key: string]: string}[] = [
-  { 
-    value: "PRE01", 
-    name: "北海道"
-  },
-]
 
 export default function HairTop() {
   const dispatch: AppDispatch = useDispatch();
+  const prefectureLists = useSelector((state: RootState) => state.topPage.prefectureLists);
   const menus = useSelector((state: RootState) => state.topPage.menus);
   const prefecture = useSelector((state: RootState) => state.topPage.prefecture);
   const keyword = useSelector((state: RootState) => state.topPage.keyword);

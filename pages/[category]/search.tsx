@@ -1,13 +1,6 @@
-import { useState, useEffect } from "react"
-import Layout from '@/components/Layout'
-import Breadcrumb from '@/components/Breadcrumb'
-
-export const prefectureLists: {[key: string]: string}[] = [
-  { 
-    value: "PRE01", 
-    name: "北海道"
-  },
-]
+import { useState, useEffect } from "react";
+import Layout from '@/components/Layout';
+import Breadcrumb from '@/components/Breadcrumb';
 
 export default function NailTop() {
   const [state, setState] = useState({

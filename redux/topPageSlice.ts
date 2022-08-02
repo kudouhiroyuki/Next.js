@@ -1,7 +1,9 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import * as menusApi from '@/api/menus';
+import * as values from '@/constants/values';
 
 export interface InitialState {
+  prefectureLists: {[key: string]: string}[];
   menus: {[key: string]: string}[];
   prefecture: string;
   keyword: string;
@@ -12,10 +14,13 @@ export interface MenusParams {
 }
 
 const initialState: InitialState = {
-  menus: [],      // メニュー一覧（API）
+  // 固定値データ
+  prefectureLists: values.prefectureLists, // 都道府県リスト
+  // APIデータ
+  menus: [],           // メニュー一覧
   // 検索データ
-  prefecture: "", // エリア
-  keyword: "",    // キーワード
+  prefecture: "",      // エリア
+  keyword: "",         // キーワード
 };
 
 // メニュー一覧取得API
