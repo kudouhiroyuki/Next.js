@@ -16,6 +16,10 @@ https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopl
 - Redux DevTools<br>
 https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=ja
 
+## ドキュメント<br>
+- React Bootstrap<br>
+https://react-bootstrap.github.io/components/alerts
+
 ## 環境構築Log<br>
 - yarnインストール<br>
 npm install --global yarn
@@ -27,10 +31,6 @@ yarn create next-app
 touch tsconfig.json<br>
 yarn add --dev typescript @types/react @types/node<br>
 yarn build
-
-## ドキュメント<br>
-- React Bootstrap<br>
-https://react-bootstrap.github.io/components/alerts
 
 - Sassインストール<br>
 yarn add sass --dev
