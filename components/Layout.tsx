@@ -1,4 +1,6 @@
-import Header from './Header'
+import Header from '@/components/Header';
+import SideBar from '@/components/SideBar';
+import layoutStyles from "@/styles/components/Layout.module.scss";
 
 type Props = {
   children?: React.ReactNode
@@ -6,11 +8,12 @@ type Props = {
 
 export default function Layout({ children }: Props) {
   return (
-    <div>
+    <div className={`${layoutStyles.layout}`}>
       <Header />
-      <main>
+      <SideBar />
+      {/* <main>
         { children }
-      </main>
+      </main> */}
     </div>
   )
 }

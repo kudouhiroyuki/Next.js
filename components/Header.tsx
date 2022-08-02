@@ -1,10 +1,9 @@
-import Link from 'next/link';
+import { Navbar, Nav } from "react-bootstrap";
 
 export default function Header() {
-  return <>
-    <header>
-      <Link href="/"><a>ヘアサロン・メイク</a></Link>
-      <Link href="/nail"><a>ネイル・まつげ</a></Link>
-    </header>
-  </>
+  return (
+    <Navbar bg="dark" variant="dark">
+      <Navbar.Brand href="">V-Canteen</Navbar.Brand>
+    </Navbar>
+  )
 }

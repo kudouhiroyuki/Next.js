@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 import { useSelector, useDispatch } from 'react-redux';
-// Components
-import Layout from '@/components/Layout';
 // Redux
 import { AppDispatch } from '@/redux/store';
 import { setValue, getMenusApi } from '@/redux/topPageSlice';
+// Components
+import Layout from '@/components/Layout';
 
 export interface RootState {
   topPage: {

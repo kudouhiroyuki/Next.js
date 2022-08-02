@@ -41,6 +41,10 @@ npm install --save @reduxjs/toolkit react-redux @types/react-redux
 - axiosインストール<br>
 yarn add axios
 
+- bootstrapインストール<br>
+npm install --save react-bootstrap
+npm install --save bootstrap
+
 - 起動<br>
 yarn dev
 
