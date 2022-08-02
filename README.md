@@ -7,6 +7,10 @@ http://localhost:3000/nail
 http://localhost:3000/hair/search<br>
 http://localhost:3000/hair/search?prefecture=&keyword=
 
+- 施設管理
+お知らせ登録 /institution/notice_regist<br>
+http://localhost:3000/institution/notice_regist
+
 ## 環境構築<br>
 npm install<br>
 yarn dev

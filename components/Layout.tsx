@@ -10,10 +10,10 @@ export default function Layout({ children }: Props) {
   return (
     <div className={`${layoutStyles.layout}`}>
       <Header />
-      <SideBar />
-      {/* <main>
+      <main>
+        <SideBar />
         { children }
-      </main> */}
+      </main>
     </div>
   )
 }
