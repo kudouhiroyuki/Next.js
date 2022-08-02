@@ -1,18 +1,18 @@
 .sidebar {
   box-sizing: border-box;
   width: 260px;
-  height: 100vh;
-  padding: 0 20px;
+  height: calc(100vh - 24px);
+  padding: 20px 20px;
   list-style-type: none;
   background-color: #222d32;
   overflow-y: scroll;
   li {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     >span {
       display: block;
       font-size: 16px;
       color: #fff;
-      margin-bottom: 3px;
+      margin-bottom: 5px;
     }
     >a {
       display: block;

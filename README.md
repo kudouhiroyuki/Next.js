@@ -28,6 +28,10 @@ touch tsconfig.json<br>
 yarn add --dev typescript @types/react @types/node<br>
 yarn build
 
+## ドキュメント<br>
+- React Bootstrap<br>
+https://react-bootstrap.github.io/components/alerts
+
 - Sassインストール<br>
 yarn add sass --dev
 
