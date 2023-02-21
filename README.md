@@ -1,11 +1,3 @@
-## Admin画面
-#### 施設管理<br>
-- お知らせ登録 /institution/notice_regist<br>
-http://localhost:3000/institution/notice_regist
-
-- お知らせ照会 /institution/notice_inquiry<br>
-http://localhost:3000/institution/notice_inquiry
-
 ## 環境構築<br>
 npm install<br>
 yarn dev
@@ -97,9 +89,3 @@ bugfix/CMS_DEFECT-983/983<br>
 bugfix/CMS_DEFECT-983/984（親ブランチから切る）<br>
 3. 子課題+子ブランチ作成(backlog ID: CMS_DEFECT-003)<br>
 bugfix/CMS_DEFECT-983/985（親ブランチから切る）
-
-## TypeScriptサンプル<br>
-const test: number[] = [0, 1, 2];<br>
-const test: Array<number> = [0, 1, 2];<br>
-const test: string[][] = [["a", "b", "c"]];<br>
-const test: Array<Array<string>> = [["a", "b", "c"]];
