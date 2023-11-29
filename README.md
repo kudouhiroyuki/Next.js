@@ -46,14 +46,6 @@ yarn dev
 - ビルド（.next/）<br>
 yarn build
 
-## ブランチ運用<br>
-- ブランチ名（チケット名にしてください）<br>
-feature/CMS_RENEW-XX<br>
-bugfix/CMS_DEFECT-XX<br>
-
-- コミット（コミットの時には「リリースフェーズ」「チケット名」を記載してください）<br>
-【フェーズ1】 CMS_DEFECT-XX 機能追加<br>
-【バグ】 CMS_DEFECT-XX バグ修正
 
 
 ## Backlog運用<br>
