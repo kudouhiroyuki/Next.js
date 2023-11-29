@@ -81,11 +81,3 @@ https://GitプルリクURL
 ■本番：テスト（完了）<br>
 デモ用：デモサロン<br>
 https://本番環境の該当URL
-
-#### Backlog複数人開発（1チケット当たり）<br>
-1. 親ブランチ作成（Backlog ID: CMS_DEFECT-98）<br>
-bugfix/CMS_DEFECT-983/983<br>
-2. 子課題+子ブランチ作成(backlog ID: CMS_DEFECT-002)<br>
-bugfix/CMS_DEFECT-983/984（親ブランチから切る）<br>
-3. 子課題+子ブランチ作成(backlog ID: CMS_DEFECT-003)<br>
-bugfix/CMS_DEFECT-983/985（親ブランチから切る）
